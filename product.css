@@ -10,6 +10,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+    
 } 
 .product-grid{
     text-align:center;
@@ -206,4 +207,20 @@ body{
     display: flex;
     
 }
-  
+
+
+.button-container{
+ display: flex;
+ width: 100px;
+}
+
+.button-container button{
+    margin: 20px;
+    padding: 15px;
+    background-color: blue;
+    border-radius: 15px;
+    width: 400px;
+    height: 50px;
+
+
+}
