@@ -21,6 +21,7 @@ let projects =[
         title: "butterfly bracelet",
         nowPrice: "Zar16.00",
         wasPrice: "Zar20.00",
+        techStack: "bracelets",
 
     },
     {
@@ -29,12 +30,40 @@ let projects =[
         title: "butterfly bracelet",
         nowPrice: "Zar16.00",
         wasPrice: "Zar20.00",
-    }
+        techStack:"Necklace"
+    },
+
+    {
+      imgURL1: "./pics/bracelet.webp" ,
+      imgURL2: "/pics/buttefly2.webp",
+      title: "butterfly bracelet",
+      nowPrice: "Zar16.00",
+      wasPrice: "Zar20.00",
+      techStack: "bracelets",
+
+  },
+  {
+    imgURL1: "./pics/bracelet.webp" ,
+    imgURL2: "/pics/buttefly2.webp",
+    title: "butterfly bracelet",
+    nowPrice: "Zar16.00",
+    wasPrice: "Zar20.00",
+    techStack:"Necklace"
+},
+{
+  imgURL1: "./pics/bracelet.webp" ,
+  imgURL2: "/pics/buttefly2.webp",
+  title: "butterfly bracelet",
+  nowPrice: "Zar16.00",
+  wasPrice: "Zar20.00",
+  techStack:"Necklace"
+},  
+    
 ];
 
 function createCard(card){
     let createdCard = 
-        `<div class="product-grid">
+        `<div class="product-grid" teckStack=${card.techStack}>
         <div class="product-image">
                 <img class="pic-1" src="${card.imgURL1}">
                 <img class="pic-2" src="${card.imgURL2}">
@@ -53,15 +82,18 @@ function createCard(card){
             <a class="add-to-cart" href="">+ Add To Cart</a>
         </div>
     </div>`;
+
 return createdCard;
 }
 
 function renderCards() {
 
-    console.log("hgytwe");
-    let productContainer = document.querySelector(".product-container");
-    for (product of projects) {
-      let card = createCard(product);
+  let productContainer = document.querySelector(".product-container");
+  productContainer.innerHTML = " "
+
+  for (product of projects) {
+    let card = createCard(product);
+      console.log(card);
       productContainer.innerHTML += card;
     }
   }
@@ -80,7 +112,7 @@ function filterCards(category) {
       card.style.display = "none";
     }
   
-    let selectedCards = document.querySelectorAll([techStack='${category}']);
+    let selectedCards = document.querySelectorAll(`[techStack='${category}']`);
   
     for (card of selectedCards) {
       card.style.display = "block";
