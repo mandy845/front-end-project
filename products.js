@@ -1,21 +1,6 @@
-let btnLogin = document.getElementById("login");
-let btnSignUp = document.getElementById("signup");
-
-let signIn = document.querySelector(".signin");
-let signUp = document.querySelector(".signup");
-
-btnLogin.onclick = function(){
-    signIn.classList.add("active");
-    signUp.classList.add("inActive");
-}
-
-btnSignUp.onclick = function(){
-   signIn.classList.remove("active");
-   signUp.classList.remove("inActive");
-}
-
 let projects =[
     {
+        id:"1",
         imgURL1: "./pics/bracelet.webp" ,
         imgURL2: "/pics/buttefly2.webp",
         title: "butterfly bracelet",
@@ -24,7 +9,7 @@ let projects =[
         techStack: "bracelets",
 
     },
-    {
+    {    id:"2",
         imgURL1: "./pics/bracelet.webp" ,
         imgURL2: "/pics/buttefly2.webp",
         title: "butterfly bracelet",
@@ -33,7 +18,7 @@ let projects =[
         techStack:"Necklace"
     },
 
-    {
+    { id:"3",
       imgURL1: "./pics/bracelet.webp" ,
       imgURL2: "/pics/buttefly2.webp",
       title: "butterfly bracelet",
@@ -42,7 +27,7 @@ let projects =[
       techStack: "bracelets",
 
   },
-  {
+    {id:"4",
     imgURL1: "./pics/bracelet.webp" ,
     imgURL2: "/pics/buttefly2.webp",
     title: "butterfly bracelet",
@@ -50,7 +35,7 @@ let projects =[
     wasPrice: "Zar20.00",
     techStack:"Necklace"
 },
-{
+{id:"5",
   imgURL1: "./pics/bracelet.webp" ,
   imgURL2: "/pics/buttefly2.webp",
   title: "butterfly bracelet",
@@ -70,7 +55,7 @@ function createCard(card){
             <ul class="social">
                 <li><a href="" data-tip="more like this"><i class="fa fa-search"></i></a></li>
                 <li><a href="" data-tip="buy now"><i class="fa fa-shopping-bag"></i></a></li>
-                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                <li><button data-tip="Add to Cart" onclick=addToCart(${card.id})><i class="fa fa-shopping-cart"></i></button></li>
             </ul>
            
         </div>
@@ -93,7 +78,7 @@ function renderCards() {
 
   for (product of projects) {
     let card = createCard(product);
-      console.log(card);
+      console.log(product);
       productContainer.innerHTML += card;
     }
   }
@@ -118,36 +103,18 @@ function filterCards(category) {
       card.style.display = "block";
     }
   }
-  
-  let regForm = document.querySelector(".form")
 
-  regForm.addEventListener("submit", e => {
-    e.preventDefault();
+  function addToCart(id) {
+    let product = projects.filter(product => product.id == id);
+    console.log(product);
 
-    let firstName = document.querySelector(".first-name").value;
-    let lastName = document.querySelector(".last-name").value;
-    let username = document.querySelector(".username").value;
-    let password = document.querySelector(".password").value;
+    let cart=JSON.parse(localStorage.getItem("cart"))
 
-    let details = {
-      firstName : firstName,
-      lastName :lastName ,
-      username :username ,
-      password :password 
+    if (cart == null) {
+        cart=[]
     }
+    cart.push(product)
+    localStorage.setItem("cart", JSON.stringify(cart))
 
-    console.log(details);
-
-    fetch("https://still-lowlands-46634.herokuapp.com/user-registration", {
-      headers: {'content-type':'application/json'},
-      method:'POST'
-      ,
-      body:JSON.stringify(details)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-    })
-
-})
-
+    document.querySelector('.shopping').innerHTML = cart.length
+}

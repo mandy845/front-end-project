@@ -64,7 +64,7 @@ body{
 .product-grid .social li{
     display:inline-block
 }
-.product-grid .social li a{
+.product-grid .social li button{
     color:#fff;
     background-color:#333;
     font-size:16px;
@@ -197,14 +197,7 @@ body{
     }
 }
  
-.icons {
-    font-size: 25px;
-    display: flex;
-    margin-left: auto;
-    justify-content: space-between;
-    width: 200px;
-    
-}
+
 
 
 .button-container{
@@ -233,11 +226,7 @@ body{
 
 
 }
-.icons i{
-    padding: 10px;
-    font-size: 25px;
-    
-    }
+
 
    
     .header span{
@@ -253,3 +242,69 @@ body{
         
     }
    
+
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+.social-container{
+  text-align: center;
+  font-size: 25px;
+    display: flex;
+    margin-left: 919px ;
+    width: 200px;
+} 
+.social-icons{
+  padding:0;
+  list-style: none;
+  display: flex;
+  font-size: 15px;
+}
+.social-icons li{
+  display: inline-block;
+  margin:0.15em;
+  position: relative;
+  font-size:30px;
+}
+.social-icons i{
+  color:#fff;
+  position: absolute;
+  top:15px;
+  left:20px;
+  transition: all 265ms ease-out;
+}
+.social-icons a{
+  display: inline-block;
+}
+.social-icons a:before{
+  transform: scale(1);
+  content:'';
+  width:70px;
+  height:70px;
+  border-radius: 100%;
+  display: block;
+  background:linear-gradient(45deg, #ff003c, #c648c8);
+  transition: all 265ms ease-out;
+}
+.social-icons a:hover:before{
+  transform: scale(0);
+  transition: all 265ms ease-out;
+}
+.social-icons a:hover i{
+  transform: scale(1.1);
+  color:#ff003c;
+  background:-webkit-linear-gradient(45deg, #ff003c, #c648c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-out;
+}
+
+.shopping {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cart-shop a{
+    position: relative;
+}
+
