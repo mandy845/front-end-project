@@ -6,6 +6,7 @@
     <script src="https://kit.fontawesome.com/a234f7d2d6.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="./nav.css">
 </head>
 <body>
     <div class="container"> 
@@ -32,14 +33,116 @@
               <button onclick="filterCards('Watches')">watches</button>
             </div>
             <div class="product-container"></div>
+            <form class="form"></form>
         </div> 
     </div>
+
+    <div class="shopping-cart">
+        <!-- Title -->
+        <div class="title">
+          Shopping Bag
+        </div>
+       
+        <!-- Product #1 -->
+        <div class="item">
+          <div class="buttons">
+            <span class="delete-btn"></span>
+            <span class="like-btn"></span>
+          </div>
+       
+          <div class="image">
+            <img src="item-1.png" alt="" />
+          </div>
+       
+          <div class="description">
+            <span></span>
+            <span>Necklace</span>
+            <span>with black heart</span>
+          </div>
+       
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+            +
+            </button>
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+              -
+            </button>
+          </div>
+       
+          <div class="total-price">$549</div>
+        </div>
+       
+        <!-- Product #2 -->
+        <div class="item">
+          <div class="buttons">
+            <span class="delete-btn"></span>
+            <span class="like-btn"></span>
+          </div>
+       
+          <div class="image">
+            <img src="item-2.png" alt=""/>
+          </div>
+       
+          <div class="description">
+            <span>Maison Margiela</span>
+            <span>Future Sneakers</span>
+            <span>White</span>
+          </div>
+       
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              +
+            </button>
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+              -
+            </button>
+          </div>
+       
+          <div class="total-price">$870</div>
+        </div>
+       
+        <!-- Product #3 -->
+        <div class="item">
+          <div class="buttons">
+            <span class="delete-btn"></span>
+            <span class="like-btn"></span>
+          </div>
+       
+          <div class="image">
+            <img src="./pics/savage2.webp" alt="" />
+          </div>
+       
+          <div class="description">
+            <span>Necklace</span>
+            <span>Gold chain</span>
+            <span>Black heart</span>
+          </div>
+       
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              +
+            </button>
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+              -
+            </button>
+          </div>
+       
+          <div class="total-price">$349</div>
+          total price:
+          <button class="checkout">check out</button>
+        </div>
+      </div>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 <script src="./products.js"></script>
+<script src="./nav.js"></script>
 </body>
 </html>
 

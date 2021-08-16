@@ -1,7 +1,7 @@
 let projects =[
     {
         id:"1",
-        imgURL1: "./pics/bracelet.webp" ,
+        imgURL1: "./pics/rings.webp" ,
         imgURL2: "/pics/buttefly2.webp",
         title: "butterfly bracelet",
         nowPrice: "Zar16.00",
@@ -10,7 +10,7 @@ let projects =[
 
     },
     {    id:"2",
-        imgURL1: "./pics/bracelet.webp" ,
+        imgURL1: "./pics/butterfly.webp" ,
         imgURL2: "/pics/buttefly2.webp",
         title: "butterfly bracelet",
         nowPrice: "Zar16.00",
@@ -117,4 +117,12 @@ function filterCards(category) {
     localStorage.setItem("cart", JSON.stringify(cart))
 
     document.querySelector('.shopping').innerHTML = cart.length
+
+    if (document.querySelector(".shopping-cart").style.display == "block") {
+      document.querySelector(".shopping-cart").style.display = "none"
+    } else {
+      document.querySelector(".shopping-cart").style.display = "block"
+    }
+    
 }
+

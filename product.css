@@ -55,7 +55,7 @@ body{
     top:60%;
     left:50%;
     z-index:1;
-    transition:all .3s ease 0s
+    transition:all .3s ease 0s;
 }
 .product-grid:hover .social{
     opacity:1;
@@ -64,9 +64,35 @@ body{
 .product-grid .social li{
     display:inline-block
 }
+
+.product-grid .social li:nth-child(1){
+    display:inline-block;
+    color: black;
+}
+.product-grid .social li:nth-child(1) a {
+    text-decoration:none;
+        color:wheat;}
+.product-grid .social li:nth-child(2){
+    display:inline-block;
+    font-size: 25px;
+text-decoration:none;
+    color: #000
+}
+.product-grid .social li:nth-child(2) a {
+text-decoration:none;
+    color: #000
+}
+.product-grid .social li:nth-child(3){
+    display:inline-block;
+    border: none;}
+    .product-grid .social li button:hover{
+        color:#fff;
+        background-color:#ef5777;
+        text-decoration: none;
+    }
+    
 .product-grid .social li button{
-    color:#fff;
-    background-color:#333;
+    
     font-size:16px;
     line-height:40px;
     text-align:center;
@@ -75,11 +101,15 @@ body{
     margin:0 2px;
     display:block;
     position:relative;
-    transition:all .3s ease-in-out
+    transition:all .3s ease-in-out;
+    border: none;
+    text-decoration: none;
+    color: #000;
 }
 .product-grid .social li a:hover{
     color:#fff;
-    background-color:#ef5777
+    background-color:#ef5777;
+    text-decoration: none;
 }
 .product-grid .social li a:after,
 .product-grid .social li a:before{
@@ -110,18 +140,7 @@ body{
 .product-grid .social li a:hover:before{
     opacity:1
 }
- .product-grid .product-discount-label,
-.product-grid .product-new-label{
-    color:#fff;
-    background-color:#ef5777;
-    font-size:12px;
-    text-transform:uppercase;
-    padding:2px 7px;
-    display:block;
-    position:absolute;
-    top:10px;
-    left:0 
-}
+
 .product-grid .product-discount-label{
     background-color:#333;
     left:auto;
@@ -258,19 +277,22 @@ body{
   list-style: none;
   display: flex;
   font-size: 15px;
+  color: white;
 }
 .social-icons li{
   display: inline-block;
   margin:0.15em;
   position: relative;
-  font-size:30px;
+  font-size:35px;
 }
 .social-icons i{
-  color:#fff;
+  color:white;
   position: absolute;
   top:15px;
-  left:20px;
+  left:25px;
   transition: all 265ms ease-out;
+  text-decoration: none;
+  font-size: 25px;
 }
 .social-icons a{
   display: inline-block;
@@ -300,11 +322,21 @@ body{
 
 .shopping {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5px;
+    left: 8px;
+    color: #eee;
+    font-size: 16px;
+    font-weight: bolder;;
 }
 
 .cart-shop a{
     position: relative;
 }
+.checkout{
+    width: 292px;
+    color: red;
+    height: 41px;
+    text-transform: ;
+}
+
 
