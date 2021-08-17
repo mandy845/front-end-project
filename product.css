@@ -277,7 +277,7 @@ text-decoration:none;
   list-style: none;
   display: flex;
   font-size: 15px;
-  color: white;
+  color: black;
 }
 .social-icons li{
   display: inline-block;
@@ -286,7 +286,7 @@ text-decoration:none;
   font-size:35px;
 }
 .social-icons i{
-  color:white;
+  color:black;
   position: absolute;
   top:15px;
   left:25px;
@@ -311,14 +311,15 @@ text-decoration:none;
   transform: scale(0);
   transition: all 265ms ease-out;
 }
+
 .social-icons a:hover i{
-  transform: scale(1.1);
-  color:#ff003c;
-  background:-webkit-linear-gradient(45deg, #ff003c, #c648c8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 265ms ease-out;
-}
+    transform: scale(1.2);
+    color:#ff003c;
+    background:-webkit-linear-gradient(45deg, #ff003c, #c648c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-out;
+  }
 
 .shopping {
     position: absolute;
@@ -336,7 +337,9 @@ text-decoration:none;
     width: 292px;
     color: red;
     height: 41px;
-    text-transform: ;
+    text-transform: uppercase;
 }
 
-
+.wrapper.headline span{
+    color: #ff003c;
+}

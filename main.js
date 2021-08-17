@@ -15,7 +15,7 @@ btnSignUp.onclick = function(){
 }
 
 
-  
+function logIn(){
   let regForm = document.querySelector(".form")
 
   regForm.addEventListener("submit", e => {
@@ -27,26 +27,29 @@ btnSignUp.onclick = function(){
     let password = document.querySelector(".password").value;
 
     let details = {
-      firstName : firstName,
-      lastName :lastName ,
-      username :username ,
-      password :password 
+      "firstName" : firstName,
+      "lastName" :lastName ,
+      "username" :username ,
+      "password" :password 
     }
+  })
 
-    console.log(details);
 
-    fetch("https://still-lowlands-46634.herokuapp.com/user-registration", {
-      headers: {'content-type':'application/json'},
-      method:'POST'
-      ,
-      body:JSON.stringify(details)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-    })
+  console.log(details);
 
-})
+  fetch("https://still-lowlands-46634.herokuapp.com/user-registration", {
+    headers: {'content-type':'application/json'},
+    method:'POST'
+    ,
+    body:JSON.stringify(details)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+}
+
+
 let addForm = document.querySelector(".form")
 
 adForm.addEventListener("submit", e => {
