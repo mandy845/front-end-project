@@ -34,7 +34,7 @@ function logIn(){
     }
   })
 
-
+localStorage.loggeduser= details
   console.log(details);
 
   fetch("https://still-lowlands-46634.herokuapp.com/user-registration", {
